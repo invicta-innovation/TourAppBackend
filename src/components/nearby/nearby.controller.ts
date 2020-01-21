@@ -1,12 +1,21 @@
-import { Controller, Get, Query } from '@nestjs/common';
+import { Controller, Get, Query, Param } from '@nestjs/common';
 import { NearbyService } from './nearby.service';
+import axios,{ AxiosResponse } from 'axios'
 
-@Controller('nearby')
+@Controller('search')
 export class NearbyController {
     constructor(private readonly nearbyService:NearbyService ){}
 
-    @Get('/')
+    @Get('/nearby')
     async getNearPlaces(@Query() query):Promise<any>{
-        return this.nearbyService.findNearbyPlaces(query);
+        return await this.nearbyService.findNearbyPlaces(query);
+    }
+    @Get('/:pr')
+    async getPhotoPlace(@Param ('pr') pr): Promise<any> {
+        return await this.nearbyService.findPlacePhoto(pr);
+    }
+    @Get('/')
+    async getPlaceDetail(@Query() query):Promise<any>{
+       return await this.nearbyService.getGooglePlaceDetail(query)
     }
 }
