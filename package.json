@@ -24,7 +24,6 @@
     "@nestjs/core": "^6.7.2",
     "@nestjs/jwt": "^6.1.1",
     "@nestjs/mongoose": "^6.1.2",
-<<<<<<< HEAD
     "@nestjs/passport": "^6.1.0",
     "@nestjs/platform-express": "^6.7.2",
     "@nestjs/typeorm": "^6.2.0",
@@ -32,8 +31,6 @@
     "bcrypt": "^3.0.6",
     "class-transformer": "^0.2.3",
     "class-validator": "^0.10.2",
-=======
->>>>>>> 90695d932209dc9f8fe934388c35f935bacba3ec
     "mongoose": "^4.13.20",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
